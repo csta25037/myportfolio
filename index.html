@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小池尊琉 | My Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" xintegrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        /* Inter Font 設定 (TailwindはデフォルトでSans-Serifを使用しますが、明確に指定) */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fc; /* 非常に薄い青みがかった白 */
+        }
+        /* カスタムスクロールバー（Webkit系ブラウザ向け）*/
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #38bdf8; /* sky-400 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0ea5e9; /* sky-500 */
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- 1. ヘッダー -->
+    <header class="bg-sky-600 shadow-lg sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-white tracking-wider">My Portfolio</h1>
+            <!-- メニューアイコン（スマホ用）- 今回はシンプルな単一ページのため非表示 -->
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="container mx-auto px-4 py-8 md:py-12">
+        
+        <!-- 2. 自己紹介セクション -->
+        <section id="profile" class="bg-white p-6 md:p-10 rounded-xl shadow-2xl mb-12 border-t-4 border-sky-500">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-sky-700 mb-6 flex items-center">
+                <i class="fas fa-user-circle mr-3 text-sky-500"></i>
+                自己紹介 (Profile)
+            </h2>
+            <div class="space-y-4">
+                <div class="flex items-center text-lg md:text-xl">
+                    <span class="font-semibold w-24 text-gray-500">名前</span>
+                    <span class="ml-4 font-bold text-gray-800">小池 尊琉 (Koike Takeru)</span>
+                </div>
+                <div class="flex items-center text-lg md:text-xl">
+                    <span class="font-semibold w-24 text-gray-500">所属</span>
+                    <span class="ml-4 font-bold text-gray-800">日本大学 理工学部</span>
+                </div>
+                
+                <!-- 自己紹介ボックス (空欄ですが、レイアウトのために設置) -->
+                <div class="pt-4 text-gray-600 italic border-t mt-6">
+                    「問題解決のための仕組みづくり」に強い関心があります。情報工学の知識を活かし、チームの効率化や目標達成に貢献できるエンジニアを目指しています。
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 学生時代に力を入れたことセクション (タイトルを修正) -->
+        <section id="gacuchika" class="bg-white p-6 md:p-10 rounded-xl shadow-2xl">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-sky-700 mb-8 flex items-center">
+                <i class="fas fa-bolt mr-3 text-sky-500"></i>
+                学生時代に力を入れたこと
+            </h2>
+            
+            <!-- カード形式でS・C・A・Rの要素を構造化 -->
+            <div class="space-y-6">
+                <!-- 状況 (Context) -->
+                <div class="p-5 border-l-4 border-sky-400 bg-blue-50 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-sky-600 mb-2">状況 (Context)</h3>
+                    <p class="text-gray-700">40人クラスの学級委員として、ペットボトルキャップ収集活動を主導しました。</p>
+                </div>
+
+                <!-- 課題 (Challenge) -->
+                <div class="p-5 border-l-4 border-orange-400 bg-orange-50 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-orange-600 mb-2">課題 (Challenge)</h3>
+                    <p class="text-gray-700">開始直後の収集数は『80個』と低迷しました。これは、協力のやり方が不明瞭なためと考え、具体的な手順をわかりやすく伝えることを課題としました。</p>
+                </div>
+
+                <!-- 行動 (Action) -->
+                <div class="p-5 border-l-4 border-green-400 bg-green-50 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-green-600 mb-2">行動 (Action)</h3>
+                    <p class="text-gray-700">キャップの回収方法を図解したポスターを作成し校内に掲示。さらに、ホームルームでは流れを実演し、昇降口での呼びかけも強化しました。</p>
+                </div>
+
+                <!-- 結果 (Result) -->
+                <div class="p-5 border-l-4 border-red-400 bg-red-50 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-red-600 mb-2">結果 (Result)</h3>
+                    <p class="text-gray-700">その結果、収集数を目標の倍である『160個』にまで増加させることができました。</p>
+                </div>
+
+                <!-- 学び (Learning) -->
+                <div class="p-5 border-l-4 border-purple-400 bg-purple-50 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-purple-600 mb-2">学び (Learning)</h3>
+                    <p class="text-gray-700">この経験を通じ、人は『何をすべきか』が明確になれば積極的に協力してくれることを学び、複雑な情報でも『視覚化や実演によっていかにわかりやすく伝えるか』が目標達成における鍵であると体得しました。</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 4. フッター -->
+    <footer class="bg-gray-700 mt-12">
+        <div class="container mx-auto px-4 py-6 text-center text-gray-300 text-sm">
+            <p>&copy; 2024 My Portfolio. All Rights Reserved. | 小池 尊琉</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
